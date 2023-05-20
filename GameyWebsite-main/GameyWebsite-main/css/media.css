@@ -1,0 +1,272 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1299px) {
+    .game-lists  .slider-item{
+        width: 23%;
+    }
+
+    .buttons {
+        top: 7vw;
+    }
+
+    .social_networks h2{
+        background-position-y: center;
+    }
+
+    @media only screen and (max-width:1239px){
+
+        .priorities {
+            line-height: 20px;}
+    }
+
+    @media only screen and (max-width: 1024px) {
+  
+        .search_bar{
+            margin-right: 4%;
+        }
+    
+        .features_list .feature_item{
+            margin-right: 15px;
+        }
+    }
+    
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .game-lists .slider-item{
+        width: 31%;
+    }
+
+.about_company{
+    flex-direction: column;
+}
+.about_company > *{
+    width: 100%;
+}
+.priorities li::before {
+    top:2px
+}
+
+
+    @media only screen and (max-width: 977px){
+        .blog article {
+            flex-direction: column;
+            justify-content: stretch;
+            margin-left: 15px;
+        }
+    .blog_about{
+        width: 100%;
+        line-height: 17px;
+        margin-top: 5px;
+    }
+    .blog .btn {
+        margin-top: 15px;
+    }
+
+@media only screen and (max-width:884px){
+    .social_networks{
+        flex-direction: column;
+        align-items: center;
+       width: 100%;
+    }
+    .social_networks h2{
+        background-position-y:8px;
+        margin: unset;
+        margin-bottom: 15px;
+    }
+
+    .social_networks >*{
+     width: 100%;
+        margin-top: 25px;
+    }
+    .footer_content .search_bar {
+        margin-right: unset
+}
+.navigation img{
+    width: 100px;
+    height: auto;
+}
+
+.user_navigation, .features_list{
+    display: none;
+}
+.user_nav .menu_logo{
+    display: block
+    }
+    .menu_logo img{
+        width: 23px
+    }
+    .user_nav{
+        justify-content: flex-end;
+    }
+
+    .header_contacts{
+        display: none;
+    }
+    .additional_info{
+        justify-content: space-between;
+    }
+    .search_bar{
+        margin: 0;
+    }
+ .categories_list{
+    display: none;
+ }
+ .games_categories{
+    width: 100%;
+ }
+ .games_categories:hover  .categories_list{
+    display: block;
+ }
+ .game_categories_section{
+    flex-direction: column;
+ }
+ .game_categories_section {
+    background-position: center;
+ }
+ .banner_info h2 {
+    font-size: 32px;}
+
+        }
+
+
+    @media only screen and (max-width: 726px) {
+        .game-lists  .slider-item{
+            width: 48%;
+        }
+
+        .features_list{
+            display: none;
+        }
+
+.discount_banners {
+    flex-direction: column;
+    align-items: stretch
+    
+}
+.discount_banner{
+    margin-bottom: 15px;
+    width: 100%;
+}
+ .about_company .about_info {
+    margin-left: 1%;
+ }
+
+
+    }
+
+    /* Extra Small Devices, Phones */
+
+    @media only screen and (max-width: 593px) {
+        .footer_navigation .footer_lists{
+            display: none;
+        }
+        .footer_navigation  .footerList_open{
+            display: block;
+        }
+        .footer_navigation h5{
+            font-size: 16px;
+        }
+        .footer_edition p {
+            font-size: 11px;
+
+        }
+        .navItem_container {
+            text-align: left
+        }
+        .footer_navigation .navItem_container h5::after{
+            left: 0; 
+            margin:0;
+        }
+        .footer_navigation{
+            flex-direction: column;
+        }
+        .footer_navigation > *{
+            width: 100%;
+        }
+        @media only screen and (max-width: 516px){
+
+            .account_wishlist li:not(:last-child){
+ 
+             display: none;
+            }
+         }
+
+        
+    }
+
+    @media only screen and (max-width: 488px) {
+  .blog_about .date{
+    font-size: 11px;
+  }
+  .blog_about  b{
+    font-size: 12px;
+  }
+  .blog_about .btn{
+    font-size: 9.5px;
+  }
+  .blog img{
+    object-position: -60px;
+  }
+  .priorities {
+    display: none;}
+      
+    .about_company .btn{
+        margin-top: 0;}
+        .extra_banner p{
+            background-image: none;
+            padding: 0;
+            padding-right: 5px;
+        }
+.shopping_promo{
+    display: none;
+}
+    
+.footer_edition{
+    flex-direction: column-reverse;
+}
+
+.footer_edition p {
+    align-self: flex-end;
+    margin-top: 15px;
+}
+
+
+
+}
+
+    @media only screen and (max-width: 480px) {
+        .game-lists .slider-item{
+            width: 100%;
+        }
+
+       
+
+        @media only screen and (max-width: 404px){
+
+            .social_networks h2{
+                font-size: 17px;
+                font-size: 17px;
+                background-size: 20px;
+                background-position: 1px 5px;
+                padding-left: 27px;
+            }
+                    .header_contacts{
+            display: none;
+        }
+
+
+    @media only screen and (max-width:378px){
+        .blog_articles {
+    justify-content: stretch;}
+        
+    }
+        }
+      
+    }
+    
+    }
+}

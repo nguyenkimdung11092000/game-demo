@@ -1,0 +1,19 @@
+{
+  "name": "gamey_new_edited",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoseHovs/GameyWebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoseHovs/GameyWebsite/issues"
+  },
+  "homepage": "https://github.com/SoseHovs/GameyWebsite#readme"
+}

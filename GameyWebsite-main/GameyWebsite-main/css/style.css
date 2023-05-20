@@ -1,0 +1,821 @@
+    :root {
+    --darkBlue: #032b38ae;
+    --yellowLight: rgb(243,180,2);
+    --yellowGradient: linear-gradient(0deg, rgb(243, 180, 2) 0%, rgb(251, 230, 0) 100%);
+    }
+    *{  margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    box-sizing: border-box; 
+    }
+    ::-webkit-scrollbar {
+    display: none;
+    }
+    html,body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    background-color: var(--darkBlue)
+    }
+    a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    ul{
+    list-style: none;
+    }
+    .flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .btn{
+    background: var(--yellowGradient);
+    text-transform: uppercase;
+    padding: 11px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 30px;
+    border: none;
+    transition: cubic-bezier(1, 0, 0, 1);
+    cursor: pointer;
+    }
+    .btn:hover{
+    background: black;
+    color: white;
+    }
+    body{
+    background-image: url(../img/body-bg.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: Fixed;
+    background-color: #032B38;
+    background-size: cover;
+    padding: 10px 4% 0;
+    }
+    .additional_info{
+    justify-content: space-between; 
+    font-size: 13px;
+    padding: 12px 0;
+    }
+    .header_contacts > *, .account_wishlist > *{
+    margin: 0 10px;
+    padding: 0 22px;
+    } 
+    .header_contacts > *:hover, .account_wishlist > *:hover{
+    color: var(--yellowLight);
+    } 
+    .header_contacts li:nth-child(1){
+    background-image: url(../img/phone.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+    } 
+    .header_contacts li:nth-child(2){
+    background-image: url(../img/header-email.svg);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    } 
+    .account_wishlist li:nth-child(1){
+    background-image: url(../img/compare.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+    } 
+    .account_wishlist li:nth-child(2){
+    background-image: url(../img/wishlist.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+    } 
+    .account_wishlist li:nth-child(3){
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+    } 
+    .account_wishlist li:nth-child(3)::after{
+    content: ">";
+    display: inline-block;
+    transform: rotate(90deg) scaleY(1.5);
+    margin: 3px 0 0 7px;
+    font-size: 11px; 
+    }
+    .navigation{
+    background-color: var(--darkBlue);
+    justify-content: space-between;
+    padding: 15px 7% 15px 4%;
+    width: 100vw;
+    margin-left: -4%;
+    }
+    .user_nav{
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0 3vw;
+    }
+    .user_navigation{
+    flex-grow: 1;
+    justify-content: space-between;
+    }
+    .user_navigation li:hover {
+    color: var(--yellowLight);
+    }
+    .user_navigation li{
+    padding: 20px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+    }
+    .user_nav .menu_logo{
+    display: none;
+    }
+   .sideNav{
+    background-color: #032b38;
+    position: absolute;
+    left: -60%;
+    z-index: 1;
+    width: 60%;
+    padding: 2% 4%;
+    height: fit-content;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: 1s;
+    }
+   .sideNavOpen{
+    left: 0;
+    }
+    .sideNav > *{
+        padding: 6% 0;
+        border-bottom: 1px solid #ffffff30;
+    }
+  
+    .userCart span{
+    display: inline-block;
+    padding: 2px 5px;
+    background-color:var(--yellowLight);
+    color: black;
+    border-radius: 10px;
+    font-size: 11px;
+    }
+    .userCart{
+    background-image: url(../img/cart-bag.svg);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: 1px 3px;
+    padding: 10px 5px 10px 30px;
+    font-size: 13px;
+    }
+    .search_features{
+    justify-content: space-between;
+    padding:40px 0;
+    }
+    .feature_item{
+    font-size: 13px;
+    margin-right:45px;
+    cursor: pointer;
+    }
+    .feature_item span {
+    display: inline-block;
+    padding: 22px;
+    border: 2px dashed white;
+    border-radius: 22px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px;
+    }
+    .search_bar{
+    width: 430px;
+    height: 41px;
+    background: var(--yellowGradient);
+    border-radius: 2px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    margin-right: 10%;
+    }
+    .search_bar span{
+    position: absolute;
+    height: 41px;
+    width: 40px;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    background:var(--yellowGradient);
+    }
+    input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    }
+    input:focus{
+    outline: none;
+    }
+    input::placeholder{
+    color: rgba(128, 128, 128, 0.712);
+    }
+    .feature_item:hover .feature {
+    border-color: var(--yellowLight);
+    }
+    .feature_item:nth-child(1) span{
+    background-image: url(../img/offer.svg);
+    }
+    .feature_item:nth-child(2) span{
+    background-image: url(../img/money-icon.svg);
+    }
+    .feature_item:nth-child(3) span{
+    background-image: url(../img/shipping.svg);
+    }
+    .featured_products  .slider-item{
+    width:22.5%
+    }
+    .game_categories_section{
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url(../img/main-banner-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    }   
+    .games_categories{
+    background-color: var(--darkBlue);
+    padding: 19px;
+    width: 21%;
+    }
+    .categories_list{
+    font-size: 14px;
+    padding: 0;
+    margin-top: 35px;
+    overflow-y: hidden;
+    }
+    .categories_item{
+    cursor: pointer;
+    padding: 18px 0;
+    border-bottom: 1px solid #c0e2f840;
+    }
+    .categories_item:hover{
+    color: var(--yellowLight);
+    }
+    .games_categories b {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 25px;
+    background-image: url(../img/menu\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 15px;
+    }
+    .categories_list_wrapped{
+    height: 0;
+    transition: 2s;
+    }
+    .showMore{
+    height: 180px;
+    transition: 2s; 
+    }
+    .list_wrapper{
+    border-bottom: none;
+    list-style: none;
+    }
+    .categories_item:last-child{
+    border-bottom: unset;
+    }
+    .banner_info b{
+    font-size: 13px;
+    }
+    .banner_info h2{
+    font-family: "Righteous";
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    }
+    .banner_info{
+    padding: 10.7% 4% 16.2%;
+    }
+    .game_banner{
+    width: 430px;
+    flex-shrink: 0;
+    }
+    .banner_wrapper{
+    overflow-x: hidden;
+    display: flex;
+    margin-top: 10%;
+    }
+    .banner_info{
+    transition: 1s;
+    transform: translateX(-190%);
+    } 
+    .bannerFirst_infoShow{
+    transform: none
+    } 
+    .bannerSecond_infoShow{
+    transform:translateX(-91%);
+    }  
+    .game_item{
+    position: relative;
+    width: 23%;
+    margin: 30px 0;
+    margin-right: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    }
+    .game_item:first-child {
+    margin-left: 0;
+    }
+    .game_item:last-child{
+    margin-right: 0;
+    }
+    .game_item img{
+    width: 100%;
+    height: auto;
+    }
+    hr{
+    background-color: #ffffff30;
+    border: none;
+    height: 1px;
+    }
+    .game-lists h3, .about_info h3,.blog h3, .footer_navigation h5 {
+    font-family: "Righteous";
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    position: relative;}
+    .game-lists h3::after, .blog h3::after, .footer_navigation h5::after{
+    content: "";
+    width: 95px;
+    height: 2px;
+    background-color: yellow;
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    }
+    .game-lists{
+    padding: 5% 0 3%;
+    overflow-x: hidden;
+    }
+    .games_lists{
+        overflow-x: hidden;
+    }
+    .sale_sign {
+    position: absolute;
+    background: var(--yellowGradient);
+    color: #000000cf;
+    padding: 6px 44px;
+    left: -33px;
+    top: 12px;
+    transform: rotate(317deg);
+    font-weight: bolder;
+    font-size: 12px;
+    }
+    .game_info{
+    display: block;
+    padding: 10px 0px;
+    }
+    .not-rated::before {
+    display: block;
+    content: "";
+    background-image: url(../img/gray_stars.png);
+    width: 60px;
+    height: 21px;
+    background-size: 58px;
+    background-repeat: no-repeat;
+    }
+    .rated::before {
+    display: block;
+    content: "";
+    background-image: url(../img/yellow_stars.png);
+    width: 60px;
+    height: 21px;
+    background-size: 58px;
+    background-repeat: no-repeat;
+    }
+    .game_info p {
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-bottom: 5px;
+    }
+    .game_info b{
+    font-size: 15px;
+    }
+    .game_info del{
+    color: gray;
+    font-size: 14px;
+    }
+    .product_onHover{
+    transform: translateY(-100%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+    }
+    .hover_item{
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 5px;
+    padding: 7px 7px 3px;
+    cursor: pointer;
+    }
+    .hover_item:hover{
+    background: var(--yellowGradient);
+    }
+    .game_item:hover  .product_onHover{
+    transform: translateY(0);
+    }
+    .game_item:hover .game_info p{
+    color: var(--yellowLight);
+    }
+    .img_wrapper{
+    overflow: hidden;
+        position: relative;
+        display: block;
+    }
+    .countdown_box{
+    width: 100%;
+    height: 4vw;
+    background: var(--yellowGradient);
+    color: black;
+    position: absolute;
+    bottom: 0;
+    font-size: 1vw;
+    justify-content: space-around;
+    transform: translateY(101%);
+    transition: 1s;
+    }
+    .game_item:hover .countdown_box{
+    transform: translateY(0);
+    }
+    .box_timing{
+    text-align: center;
+    position: relative;
+    }
+    .box_timing span{
+    font-weight: bold;
+    }
+    .box_timing::after {
+    position: absolute;
+    content: ":";
+    top: 0;
+    right: -50%;
+    }
+    .box_timing:last-child::after{
+    display: none;
+    }
+    .extra_banner{
+    font-family: "Righteous";
+    background-image: url(../img/extra_100.jpg);
+    align-items: center;
+    padding: 30px 15px;
+    font-size: 30px;
+    margin-bottom: 5%;
+    }
+    .extra_banner p {
+    padding: 12px 20px 12px 70px;
+    background-image: url(../img/offer.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    }
+    .extra_banner .btn{
+    margin: 0;
+    }
+    .clothes_discount {
+    background-image: url(../img/B2vu5bJUcjM.jpg);
+    background-repeat: no-repeat;
+    background-size: 217%;
+    width: 55%;
+    margin-right: 25px;
+    background-position: 25% 54%;
+    }
+    .discount_banner{
+    padding: 7% 3%;
+    font-size: 19px;
+    font-family: "Righteous";
+    }
+    .apps_discount{
+    background-image: url(../img/banner-03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45%;
+    }
+    .apps_discount b{
+    font-weight: 100;
+    font-size: 14px;
+    }
+    .apps_discount h2{
+    margin-top: 10px;
+    }
+    .discount_banners{
+    justify-content: space-between;
+    }
+    .shopping_promo h3::after{
+    display: none; 
+    }
+    .shopping_promo{
+    background-color: var(--darkBlue);
+    align-self: stretch;
+    padding: 5% 3%;
+    flex-grow: 0;
+    max-width: 30%;
+    margin-right: 30px;
+    }
+    .shopping_promo p{
+    margin: 40px 0 15px;
+    }
+    .newest_games{
+    padding: 0;
+    padding-top: 5%;
+    }
+    .newest_games .game_item{
+    margin-bottom: 0;
+    width: 22.5%;
+    }
+    .about_company {
+    background-color: var(--darkBlue);
+    padding: 5%;
+    margin: 4% 0 0;
+    align-items: center;
+    }
+    .about_company img{
+        width: 100%;
+    }
+    .about_info{
+    margin-left: 50px;
+    width: 45%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    }
+    .about_info h3{
+    margin-bottom: 40px;
+    }
+    .about_info p {
+    margin-bottom: 40px;
+    line-height: 21px;
+    }
+    .priorities{
+    font-size: 13px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    }
+    .priorities li{
+    padding-left: 50px;
+    position: relative;
+    }
+    .priorities li::before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    left: 10px;
+    top:10px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ebb002;
+    background-image: url(../img/right-arrow\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    }
+    .game_item:hover .img_wrapper img{
+    filter: brightness(0.5);
+    }
+    .elementors{
+    overflow-x: hidden;
+    margin:2.5% 0;
+    }
+    .elementors_list{
+    justify-content: space-between;
+    }
+    .elementors_item{
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-align: center;
+    flex-basis: 212px;
+    margin-right: 24px;
+    padding: 11px 0;
+    font-size: 30px;
+    color: #ded5d5c9;
+    border: 1px solid #80808091;
+    border-radius: 2px;
+    cursor: pointer;
+    }
+    .elementors_item:hover{
+        color: var(--yellowLight);
+        border: 1px solid var(--yellowLight);
+    }
+    .blog{
+    padding: 4% 0 3%;
+    position: relative;
+    overflow-x: hidden;
+    }
+    .blog_articles  {
+    justify-content: flex-start;
+    margin-top: 25px;
+    }
+    .blog_articles article{
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 50%;
+    }
+    .blog b{
+    letter-spacing: 1px;
+    }
+    .blog_about{
+        width: 50%;
+        margin: 8% 3%;
+    }
+   .blog_articles .img_wrapper{
+   width: 100%;
+   }
+    .date{
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    font-size: 14px;
+    }
+    .date::before{
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 3px;
+    background-color: var(--yellowLight);
+    top: 7px;
+    left: 5px;
+    }
+    .footer_content{
+    width: 100vw;
+    margin-left: -4%;
+    background-color: var(--darkBlue);
+    }
+    .footer_content .search_bar span{
+    width: 85px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 10px;
+    }
+    .footer_content .search_bar {
+    margin-right: 50px;
+    }
+    .social_networks{
+    padding: 40px 11%; 
+    }
+    .social_networks h2{
+    position: relative;
+    font-family: "Righteous";
+    margin-right:38px;
+    font-size: 29px;
+    padding-left: 55px;
+    background-image: url(../img/letter.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 1px 8px;
+    }
+    .social_buttons a{
+    width: 40px;
+    height: 40px;
+    background-color: #e3dddd;
+    text-align: center;
+    padding: 13px;
+    margin-right: 5px;
+    }
+    .social_buttons{
+        display: flex;
+    }
+    .social_buttons a:hover{
+    background: var(--yellowGradient);
+    }
+    .footer_navigation{
+    justify-content: space-between;
+    padding: 4%;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    }
+    .footer_navigation > *{
+    width: 25%;
+    align-self: flex-start;
+    }
+    .footer_navigation h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+    }
+    .navItem_container{
+    text-align: center;
+    position: relative;
+    }
+ 
+    .footer_navigation li:first-child{
+    margin-top: 30px;
+    }
+    .footer_navigation li {
+    cursor: pointer;
+    padding: 4px;
+    }
+    .footer_navigation li:hover{
+    color: var(--yellowLight);
+    }
+    .footer_navigation .navItem_container h5::after{
+    left: 50%;
+    margin-left: -45px;
+    }
+    .contact_adress span{
+    margin-top: 12px;
+    display: inline-block;
+    }
+    .footer_content hr:first-of-type{
+    margin: 0 3%;
+    }
+    .payment_options span{
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    }
+    .payment_options span:first-child{
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    }
+    .payment_options span:nth-child(2){
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 0 -63px;
+    }
+    .payment_options span:nth-child(3){
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 0 -126px;
+    }
+    .payment_options span:nth-child(4){
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 0 -189px;
+    }
+    .payment_options span:nth-child(5){
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 0 -252px;
+    }
+    .payment_options span:nth-child(6){
+    background-image: url(../img/payment-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 0 -315px;
+    }
+    .footer_edition{
+    justify-content:space-between;
+    padding: 2% 3%;
+    }
+    .game-lists{
+    position: relative;
+    }
+    .btn-left{
+    margin-right: 20px;
+    }
+    .evt_btns{
+    cursor: pointer;
+    }
+    .evt_btns svg:hover {
+    fill: var(--yellowLight);
+    }
+    .buttons{
+    position: absolute;
+    right: 0;
+    top: 13%;
+    }
+    .slider-item{
+    width: 18%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    }
+    .slider-list{
+    justify-content: unset;
+    }
+    .menu_items::after{
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/arrow_down.svg);
+        background-size: 8px;
+        background-repeat: no-repeat;
+        top: 11px;
+        left: 108px;
+    
+    
+    }
